@@ -16,9 +16,7 @@ class CreatePrecioEspecialsTable extends Migration
         Schema::create('precio_especials', function (Blueprint $table) {
             $table->id();
             $table->string('cliente');
-            $table->bigInteger('clientes_id')->unsiged();
             $table->string('articulo');
-            $table->bigInteger('productos_id')->unsigned();
             $table->double('precio')->default();
             $table->boolean('active');
             $table->timestamps();
