@@ -117,11 +117,8 @@ class ClienteController extends Controller
              //Transacción exitosa
             \DB::commit();
 
-            $clientes = Cliente::all();
-             //Devuelve resultado correcto
-            return response()->json(['Clientes' => $clientes], 200);
-           
-            
+            return response()->json(['result'=>'ok']);
+         
         } catch (Exception $e) {
 
              //Rollback transaction
